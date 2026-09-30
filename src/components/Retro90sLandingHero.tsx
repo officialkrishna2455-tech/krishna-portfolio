@@ -20,10 +20,10 @@ export const Retro90sLandingHero: React.FC<Retro90sLandingHeroProps> = ({
   return (
     <section 
       id="landing" 
-      className="relative z-10 min-h-[94vh] flex flex-col justify-between pt-20 pb-8 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto"
+      className="landing-hero-container"
     >
       {/* Top Welcome Telemetry Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
         <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
           <span className="flex items-center gap-1.5 bg-black text-white px-3 py-1 font-bold border-2 border-white shadow-[2px_2px_0px_#444]">
             <span className="w-2.5 h-2.5 rounded-full bg-white animate-ping" />
@@ -63,13 +63,13 @@ export const Retro90sLandingHero: React.FC<Retro90sLandingHeroProps> = ({
       </div>
 
       {/* Main Center Stage: Huge Bold Introduction */}
-      <div className="my-auto py-8 max-w-4xl">
+      <div className="my-auto py-6 max-w-4xl">
         <div className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-extrabold text-white bg-black border border-white/60 px-3 py-1 mb-4">
           <Terminal className="w-4 h-4 text-white" />
           <span>PORTFOLIO_SYSTEM // PRESENTING CANDIDATE</span>
         </div>
 
-        <h1 className="font-mono text-6xl sm:text-8xl lg:text-9xl font-black text-white tracking-tight uppercase drop-shadow-[0_4px_16px_rgba(255,255,255,0.25)] leading-none">
+        <h1 className="font-mono text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tight uppercase leading-none">
           {director.name}
         </h1>
 
