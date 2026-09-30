@@ -6,9 +6,7 @@ import { Retro90sProjects } from './components/Retro90sProjects';
 import { Retro90sSkills } from './components/Retro90sSkills';
 import { Retro90sCertifications } from './components/Retro90sCertifications';
 import { Retro90sContact } from './components/Retro90sContact';
-import { Retro90sFooter } from './components/Retro90sFooter';
 import { Retro90sTaskbar } from './components/Retro90sTaskbar';
-import { RetroDesktopIcons } from './components/RetroDesktopIcons';
 import { RetroCRTOverlay } from './components/RetroCRTOverlay';
 import { ResumeModal } from './components/ResumeModal';
 import { cyberSound } from './utils/soundEffects';
@@ -32,10 +30,6 @@ export function App() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleToggleCrt = () => {
@@ -79,9 +73,6 @@ export function App() {
 
         {/* Modem Dispatch & Contact Window */}
         <Retro90sContact onOpenResume={() => setShowResumeModal(true)} />
-
-        {/* System Footer Window */}
-        <Retro90sFooter onScrollToTop={handleScrollToTop} />
       </main>
 
       {/* 6. AUTHENTIC 1990S FIXED BOTTOM TASKBAR & START MENU */}
