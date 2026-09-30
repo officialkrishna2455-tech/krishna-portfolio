@@ -445,44 +445,6 @@ export const Retro3DCharacterBackground: React.FC<Retro3DCharacterBackgroundProp
         }}
       />
 
-      {/* 1990s Holographic Telemetry HUD Cards for the 3D Character */}
-      <div className="absolute top-20 right-4 sm:right-10 hidden xl:flex flex-col gap-2.5 pointer-events-auto font-mono text-[11px] text-[#e0e0e0]">
-        <div 
-          className="bg-[#121212]/90 border border-[#444] px-3.5 py-2 backdrop-blur-md shadow-[2px_2px_0px_#ffffff,-2px_-2px_0px_#333333] transition-all hover:border-white"
-          onClick={() => cyberSound.play90sKeyClick()}
-        >
-          <div className="flex items-center justify-between gap-3 text-white font-bold border-b border-[#333] pb-1 mb-1">
-            <span className="flex items-center gap-1.5">
-              <Cpu className="w-3.5 h-3.5 text-white animate-pulse" />
-              <span>3D Character Companion</span>
-            </span>
-            <span className="text-[9px] bg-white text-black px-1.5 py-0.2 font-extrabold">Three.js</span>
-          </div>
-          <div className="flex flex-col gap-0.5 text-[#aaa] text-[10px]">
-            <div className="flex justify-between">
-              <span>INTERACTION:</span>
-              <span className="text-white font-semibold">Mouse Movement</span>
-            </div>
-            <div className="flex justify-between">
-              <span>GRAPHICS:</span>
-              <span className="text-white font-semibold">Procedural 3D Mesh</span>
-            </div>
-            <div className="flex justify-between">
-              <span>STYLE:</span>
-              <span className="text-white font-semibold">90s Black & White</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Small Retro Crosshair Coordinate Tracker */}
-        <div className="bg-[#101010]/85 border border-[#333] px-3 py-1.5 text-[10px] text-[#888] flex items-center justify-between">
-          <span className="flex items-center gap-1.5">
-            <Radio className="w-3 h-3 text-white animate-spin-slow" />
-            <span>Renderer: WebGL</span>
-          </span>
-          <span className="text-white font-bold">60.0 FPS</span>
-        </div>
-      </div>
     </div>
   );
 };
