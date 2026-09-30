@@ -186,6 +186,84 @@ class CyberSoundController {
     osc.stop(t + 0.24);
   }
 
+  // 90s Vintage Computer Sounds
+  public play90sKeyClick() {
+    if (this.isMuted) return;
+    this.initCtx();
+    if (!this.ctx) return;
+    const t = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = "square";
+    osc.frequency.setValueAtTime(1400, t);
+    osc.frequency.exponentialRampToValueAtTime(320, t + 0.015);
+    gain.gain.setValueAtTime(0.06, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.02);
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.025);
+  }
+
+  public play90sWindowOpen() {
+    if (this.isMuted) return;
+    this.initCtx();
+    if (!this.ctx) return;
+    const freqs = [440, 554.37, 659.25, 880]; // A Major arpeggio
+    freqs.forEach((f, i) => {
+      if (!this.ctx) return;
+      const t = this.ctx.currentTime + i * 0.045;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(f, t);
+      gain.gain.setValueAtTime(0.07, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.2);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(t);
+      osc.stop(t + 0.22);
+    });
+  }
+
+  public play90sFloppy() {
+    if (this.isMuted) return;
+    this.initCtx();
+    if (!this.ctx) return;
+    const t = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = "sawtooth";
+    osc.frequency.setValueAtTime(180, t);
+    osc.frequency.setValueAtTime(260, t + 0.03);
+    osc.frequency.setValueAtTime(140, t + 0.07);
+    gain.gain.setValueAtTime(0.05, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.13);
+  }
+
+  public play90sModem() {
+    if (this.isMuted) return;
+    this.initCtx();
+    if (!this.ctx) return;
+    const t = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = "sawtooth";
+    osc.frequency.setValueAtTime(1200, t);
+    osc.frequency.linearRampToValueAtTime(2400, t + 0.08);
+    osc.frequency.setValueAtTime(800, t + 0.09);
+    gain.gain.setValueAtTime(0.04, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.2);
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.22);
+  }
+
   public playClapperboard() {
     this.playDialTick();
   }
