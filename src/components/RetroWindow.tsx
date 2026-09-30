@@ -130,7 +130,7 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
       </div>
 
       {/* 2. 90s Menu Bar */}
-      <div className="bg-[#1a1a1a] border-b border-[#333] px-3.5 py-1.5 text-xs font-mono text-[#e5e5e5] font-semibold flex items-center gap-5 select-none">
+      <div className="bg-[#181818] border-b border-[#333] px-3.5 py-1 text-xs font-mono text-[#d0d0d0] font-semibold flex items-center gap-4 select-none">
         <span 
           className="hover:text-white hover:underline cursor-pointer" 
           onClick={() => {
@@ -138,7 +138,7 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
             document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          About
+          [About]
         </span>
         <span 
           className="hover:text-white hover:underline cursor-pointer" 
@@ -147,7 +147,7 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
             document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          Projects
+          [Projects]
         </span>
         <span 
           className="hover:text-white hover:underline cursor-pointer" 
@@ -156,7 +156,7 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
             document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          Skills
+          [Skills]
         </span>
         <span 
           className="hover:text-white hover:underline cursor-pointer" 
@@ -165,7 +165,7 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
             document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          Certifications
+          [Certifications]
         </span>
         <span 
           className="hover:text-white hover:underline cursor-pointer" 
@@ -174,10 +174,10 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
             document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          Contact
+          [Contact]
         </span>
-        <div className="ml-auto text-xs text-[#bbb] font-bold hidden md:block">
-          KRISHNA // PORTFOLIO
+        <div className="ml-auto text-xs text-[#888] font-mono hidden md:block">
+          OS_WINDOW // 1990s
         </div>
       </div>
 
