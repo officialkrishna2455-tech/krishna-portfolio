@@ -23,6 +23,7 @@ export const Retro90sNavbar: React.FC<Retro90sNavbarProps> = ({
   };
 
   const navLinks = [
+    { label: 'Home', id: 'landing' },
     { label: 'About', id: 'hero' },
     { label: 'Projects', id: 'projects' },
     { label: 'Skills', id: 'skills' },
@@ -37,7 +38,7 @@ export const Retro90sNavbar: React.FC<Retro90sNavbarProps> = ({
         <div 
           onClick={() => {
             cyberSound.play90sKeyClick();
-            onNavigate('hero');
+            onNavigate('landing');
           }}
           className="flex items-center gap-2 cursor-pointer group"
         >

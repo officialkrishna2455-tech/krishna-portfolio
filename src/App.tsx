@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Retro3DCharacterBackground } from './components/Retro3DCharacterBackground';
 import { Retro90sNavbar } from './components/Retro90sNavbar';
+import { Retro90sLandingHero } from './components/Retro90sLandingHero';
 import { Retro90sHero } from './components/Retro90sHero';
 import { Retro90sProjects } from './components/Retro90sProjects';
 import { Retro90sSkills } from './components/Retro90sSkills';
@@ -45,7 +46,7 @@ export function App() {
       {/* 2. 1990s CRT MONITOR SCANLINE OVERLAY (TOGGLEABLE) */}
       <RetroCRTOverlay enabled={crtEnabled} />
 
-      {/* 4. 1990s TOP SYSTEM NAVIGATION */}
+      {/* 3. 1990s TOP SYSTEM NAVIGATION */}
       <Retro90sNavbar
         onNavigate={handleNavigate}
         onOpenResume={() => setShowResumeModal(true)}
@@ -53,8 +54,15 @@ export function App() {
         onToggleCrt={handleToggleCrt}
       />
 
-      {/* 5. MAIN CONTENT WINDOWS (90S COMPUTER WORLD MONOCHROME) */}
-      <main className="relative z-10 space-y-4 pb-16">
+      {/* 4. MAIN CONTENT (LANDING HERO + 90S OS MODULE WINDOWS) */}
+      <main className="relative z-10 space-y-6 pb-20">
+        {/* Full-Impact Landing Page Hero Stage */}
+        <Retro90sLandingHero
+          onExploreProjects={() => handleNavigate('projects')}
+          onOpenContact={() => handleNavigate('contact')}
+          onOpenResume={() => setShowResumeModal(true)}
+        />
+
         {/* System Boot Hero Window */}
         <Retro90sHero
           onOpenProjects={() => handleNavigate('projects')}
