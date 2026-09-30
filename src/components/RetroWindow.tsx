@@ -17,11 +17,11 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
   id,
   title,
   icon = 'terminal',
-  version = 'v98.1',
+  version,
   children,
   className = '',
   defaultMinimized = false,
-  statusBarText = 'STATUS: 100% READY | MEMORY: 64MB OK | DISK: MOUNTED'
+  statusBarText = 'Status: Active | 2026 Portfolio'
 }) => {
   const [isMinimized, setIsMinimized] = useState(defaultMinimized);
   const [isMaximized, setIsMaximized] = useState(false);
@@ -79,9 +79,11 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
           <span className="font-mono text-sm font-extrabold tracking-wider text-white truncate drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
             {title}
           </span>
-          <span className="hidden sm:inline-block text-xs font-mono font-bold text-white bg-[#000] px-2 py-0.5 border border-[#555]">
-            {version}
-          </span>
+          {version && (
+            <span className="hidden sm:inline-block text-xs font-mono font-bold text-white bg-[#000] px-2 py-0.5 border border-[#555]">
+              {version}
+            </span>
+          )}
         </div>
 
         {/* 90s Window Control Buttons: [ - ] [ □ ] [ X ] */}
@@ -127,15 +129,55 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
         </div>
       </div>
 
-      {/* 2. Classic 90s Menu Bar (File, Edit, View, Help) */}
+      {/* 2. 90s Menu Bar */}
       <div className="bg-[#1a1a1a] border-b border-[#333] px-3.5 py-1.5 text-xs font-mono text-[#e5e5e5] font-semibold flex items-center gap-5 select-none">
-        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>File</span>
-        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>Edit</span>
-        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>View</span>
-        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>Network</span>
-        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>Help</span>
+        <span 
+          className="hover:text-white hover:underline cursor-pointer" 
+          onClick={() => {
+            cyberSound.play90sKeyClick();
+            document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          About
+        </span>
+        <span 
+          className="hover:text-white hover:underline cursor-pointer" 
+          onClick={() => {
+            cyberSound.play90sKeyClick();
+            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Projects
+        </span>
+        <span 
+          className="hover:text-white hover:underline cursor-pointer" 
+          onClick={() => {
+            cyberSound.play90sKeyClick();
+            document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Skills
+        </span>
+        <span 
+          className="hover:text-white hover:underline cursor-pointer" 
+          onClick={() => {
+            cyberSound.play90sKeyClick();
+            document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Certifications
+        </span>
+        <span 
+          className="hover:text-white hover:underline cursor-pointer" 
+          onClick={() => {
+            cyberSound.play90sKeyClick();
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Contact
+        </span>
         <div className="ml-auto text-xs text-[#bbb] font-bold hidden md:block">
-          C:\KRISHNA\PORTFOLIO\
+          KRISHNA // PORTFOLIO
         </div>
       </div>
 
@@ -155,7 +197,7 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
       >
         <span className="truncate font-semibold">{statusBarText}</span>
         <span className="hidden sm:inline-block shrink-0 text-black font-extrabold bg-white px-2 py-0.5 border border-[#333]">
-          56.6K BAUD OK
+          ACTIVE
         </span>
       </div>
     </div>

@@ -14,37 +14,37 @@ export const RetroDesktopIcons: React.FC<RetroDesktopIconsProps> = ({
   const icons = [
     {
       id: 'my-computer',
-      label: 'My Computer',
+      label: 'About Me',
       icon: Monitor,
       action: () => onNavigate('hero')
     },
     {
       id: 'projects',
-      label: 'Projects.exe',
+      label: 'Projects',
       icon: Folder,
       action: () => onNavigate('projects')
     },
     {
       id: 'skills',
-      label: 'Skills.cpl',
+      label: 'Skills',
       icon: Cpu,
       action: () => onNavigate('skills')
     },
     {
       id: 'credentials',
-      label: 'Degrees.mui',
+      label: 'Certifications',
       icon: Award,
       action: () => onNavigate('certifications')
     },
     {
-      id: 'modem',
-      label: 'Modem.com',
+      id: 'contact',
+      label: 'Contact',
       icon: Mail,
       action: () => onNavigate('contact')
     },
     {
       id: 'resume',
-      label: 'Resume.pdf',
+      label: 'Resume (PDF)',
       icon: FileText,
       action: onOpenResume
     },
@@ -54,7 +54,7 @@ export const RetroDesktopIcons: React.FC<RetroDesktopIconsProps> = ({
       icon: Trash2,
       action: () => {
         cyberSound.play90sFloppy();
-        alert('[RECYCLE_BIN] 0 Bytes in Wastebasket. All neural pipelines intact!');
+        alert('Recycle Bin: 0 Items. All systems, skills, and projects are active!');
       }
     }
   ];

@@ -46,10 +46,10 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
     <section id="contact" className="relative z-10 py-12 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
       <RetroWindow
         id="contact-window"
-        title="C:\COMMUNICATIONS\MODEM_TERMINAL.COM"
+        title="Contact Krishna — AI/ML & Software Engineer"
         icon="terminal"
-        version="HAYES_AT v9.6"
-        statusBarText="CARRIER DETECT: 56,600 BPS | PROTOCOL: V.90 | HANDSHAKE: ACK"
+        version="Available Now"
+        statusBarText="Status: Available for Full-Time Roles | Email: officialkrishna2455@gmail.com"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Direct Coordinates */}
@@ -57,11 +57,11 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
             <div className="bg-[#141414] border-2 border-[#666] p-6 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
               <div className="flex items-center gap-2 font-mono text-sm font-black text-white border-b border-[#333] pb-2.5 mb-4">
                 <Radio className="w-5 h-5 text-white" />
-                <span>OPERATOR_COORDINATES</span>
+                <span>Contact Information</span>
               </div>
 
               <p className="font-mono text-xs sm:text-sm text-[#f0f0f0] font-medium leading-relaxed mb-5">
-                Available for full-time Software Engineer, AI/ML Engineer, and Intelligent Systems roles. Connect via direct carrier or electronic mail.
+                Available for full-time Software Engineer, AI/ML Engineer, and Intelligent Systems roles. Connect via direct phone or email.
               </p>
 
               <div className="space-y-3.5 font-mono">
@@ -137,7 +137,7 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                 }}
               >
                 <FileText className="w-4 h-4 text-black" />
-                <span>[ OPEN_OFFICIAL_RESUME.PDF ]</span>
+                <span>[ View Official Resume (PDF) ]</span>
               </button>
             </div>
           </div>
@@ -148,10 +148,10 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
               <div className="flex items-center justify-between border-b border-[#333] pb-2 mb-4 font-mono text-xs text-[#aaa]">
                 <span className="font-bold text-white flex items-center gap-2">
                   <Terminal className="w-4 h-4 text-white" />
-                  <span>ELECTRONIC_DISPATCH_CLIENT</span>
+                  <span>Send a Direct Message</span>
                 </span>
                 <span className="text-[10px] bg-black text-white px-2 py-0.5 border border-[#444]">
-                  ENCRYPT: RSA-1024
+                  Quick Form
                 </span>
               </div>
 
@@ -161,16 +161,16 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                     <Check className="w-6 h-6 stroke-[3]" />
                   </div>
                   <h4 className="text-white font-extrabold text-base tracking-widest">
-                    PACKET TRANSMISSION CONFIRMED!
+                    MESSAGE SENT SUCCESSFULLY!
                   </h4>
                   <p className="text-xs text-[#bbb] max-w-md mx-auto">
-                    Data packets dispatched successfully over port 25. Operator Krishna has received your communication signal and will respond promptly.
+                    Thank you for reaching out! Krishna has received your message and will respond promptly.
                   </p>
                   <button
                     onClick={() => setTransmitted(false)}
                     className="font-mono text-xs font-bold px-4 py-1.5 bg-[#222] text-white border border-[#666] hover:bg-white hover:text-black"
                   >
-                    [ COMPOSE_ANOTHER ]
+                    [ Send Another Message ]
                   </button>
                 </div>
               ) : (
@@ -178,7 +178,7 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-black text-white uppercase block mb-1.5">
-                        SENDER_IDENTIFIER (NAME):
+                        Your Name:
                       </label>
                       <input
                         type="text"
@@ -192,7 +192,7 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
 
                     <div>
                       <label className="text-xs font-black text-white uppercase block mb-1.5">
-                        RETURN_ROUTING (EMAIL):
+                        Your Email Address:
                       </label>
                       <input
                         type="email"
@@ -207,7 +207,7 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
 
                   <div>
                     <label className="text-xs font-black text-white uppercase block mb-1.5">
-                      PACKET_HEADER (SUBJECT):
+                      Subject:
                     </label>
                     <input
                       type="text"
@@ -220,12 +220,12 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
 
                   <div>
                     <label className="text-xs font-black text-white uppercase block mb-1.5">
-                      MESSAGE_PAYLOAD:
+                      Your Message:
                     </label>
                     <textarea
                       rows={5}
                       required
-                      placeholder="Write your transmission or project inquiries here..."
+                      placeholder="Write your message or project inquiries here..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full bg-black border-2 border-white/60 text-white px-3.5 py-2.5 text-sm focus:border-white focus:outline-none resize-none placeholder:text-[#777]"
@@ -234,7 +234,7 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
 
                   <div className="pt-2 flex flex-wrap items-center justify-between gap-3">
                     <span className="text-xs text-[#d1d5db] font-bold">
-                      PRESS SEND TO DISPATCH PACKET OVER PORT 25
+                      Direct email notifications enabled
                     </span>
 
                     <button
@@ -242,7 +242,7 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                       className="font-mono text-sm font-black px-6 py-3 bg-white text-black hover:bg-[#ddd] border-2 border-white flex items-center gap-2.5 shadow-[3px_3px_0px_#444] active:translate-y-[1px]"
                     >
                       <Send className="w-4 h-4 stroke-[2.5]" />
-                      <span>[ TRANSMIT_PACKET.SEND ]</span>
+                      <span>[ Send Message ]</span>
                     </button>
                   </div>
                 </form>

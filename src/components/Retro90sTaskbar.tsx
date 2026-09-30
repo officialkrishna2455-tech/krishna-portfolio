@@ -72,7 +72,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
               className="w-8 bg-black border-r border-[#333] flex items-end justify-center pb-3 text-white font-mono font-extrabold text-xs tracking-widest uppercase"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
             >
-              NOIR-OS // 1998
+              KRISHNA // 2026
             </div>
 
             {/* Menu Items */}
@@ -82,7 +82,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
                 className="px-3 py-2 flex items-center gap-2.5 hover:bg-white hover:text-black cursor-pointer transition-colors"
               >
                 <Terminal className="w-4 h-4 shrink-0" />
-                <span className="font-bold">System Boot (Bio)</span>
+                <span className="font-bold">About Krishna (Bio)</span>
               </div>
 
               <div
@@ -90,7 +90,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
                 className="px-3 py-2 flex items-center gap-2.5 hover:bg-white hover:text-black cursor-pointer transition-colors"
               >
                 <Folder className="w-4 h-4 shrink-0" />
-                <span className="font-bold">Project Manager (.EXE)</span>
+                <span className="font-bold">Projects & Applications</span>
               </div>
 
               <div
@@ -98,7 +98,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
                 className="px-3 py-2 flex items-center gap-2.5 hover:bg-white hover:text-black cursor-pointer transition-colors"
               >
                 <Cpu className="w-4 h-4 shrink-0" />
-                <span className="font-bold">Skills Registry (.CPL)</span>
+                <span className="font-bold">Technical Skills</span>
               </div>
 
               <div
@@ -106,7 +106,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
                 className="px-3 py-2 flex items-center gap-2.5 hover:bg-white hover:text-black cursor-pointer transition-colors"
               >
                 <Award className="w-4 h-4 shrink-0" />
-                <span className="font-bold">Credentials & Degrees</span>
+                <span className="font-bold">Education & Certifications</span>
               </div>
 
               <div
@@ -114,7 +114,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
                 className="px-3 py-2 flex items-center gap-2.5 hover:bg-white hover:text-black cursor-pointer transition-colors"
               >
                 <Mail className="w-4 h-4 shrink-0" />
-                <span className="font-bold">Modem Dispatch (.COM)</span>
+                <span className="font-bold">Contact Information</span>
               </div>
 
               <div className="my-1 border-t border-[#333]" />
@@ -201,7 +201,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
               style={{ boxShadow: 'inset 1px 1px 0px #333, inset -1px -1px 0px #000' }}
             >
               <Terminal className="w-3 h-3 text-white" />
-              <span>KRISHNA_BIO</span>
+              <span>About</span>
             </button>
 
             <button
@@ -213,7 +213,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
               style={{ boxShadow: 'inset 1px 1px 0px #333, inset -1px -1px 0px #000' }}
             >
               <Folder className="w-3 h-3 text-white" />
-              <span>PROJECTS.EXE</span>
+              <span>Projects</span>
             </button>
 
             <button
@@ -225,7 +225,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
               style={{ boxShadow: 'inset 1px 1px 0px #333, inset -1px -1px 0px #000' }}
             >
               <Cpu className="w-3 h-3 text-white" />
-              <span>SKILLS.CPL</span>
+              <span>Skills</span>
             </button>
 
             <button
@@ -237,7 +237,7 @@ export const Retro90sTaskbar: React.FC<Retro90sTaskbarProps> = ({
               style={{ boxShadow: 'inset 1px 1px 0px #333, inset -1px -1px 0px #000' }}
             >
               <Mail className="w-3 h-3 text-white" />
-              <span>MODEM.COM</span>
+              <span>Contact</span>
             </button>
           </div>
         </div>

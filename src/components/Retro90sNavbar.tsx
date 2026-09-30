@@ -23,11 +23,11 @@ export const Retro90sNavbar: React.FC<Retro90sNavbarProps> = ({
   };
 
   const navLinks = [
-    { label: 'SYSTEM_BOOT', id: 'hero' },
-    { label: 'PROJECTS.EXE', id: 'projects' },
-    { label: 'SKILLS.CPL', id: 'skills' },
-    { label: 'CREDENTIALS', id: 'certifications' },
-    { label: 'MODEM_CONTACT', id: 'contact' }
+    { label: 'About', id: 'hero' },
+    { label: 'Projects', id: 'projects' },
+    { label: 'Skills', id: 'skills' },
+    { label: 'Certifications', id: 'certifications' },
+    { label: 'Contact', id: 'contact' }
   ];
 
   return (
@@ -45,10 +45,10 @@ export const Retro90sNavbar: React.FC<Retro90sNavbarProps> = ({
             98
           </div>
           <span className="font-mono text-xs font-bold text-white tracking-wider group-hover:underline">
-            KRISHNA // NOIR-OS
+            KRISHNA // PORTFOLIO
           </span>
-          <span className="hidden sm:inline-block text-[9px] font-mono text-[#888] bg-black px-1.5 py-0.2 border border-[#333]">
-            3D_CYBER_CGI
+          <span className="hidden sm:inline-block text-[9px] font-mono text-[#aaa] bg-black px-1.5 py-0.2 border border-[#444]">
+            AI & SYSTEMS
           </span>
         </div>
 
@@ -61,7 +61,7 @@ export const Retro90sNavbar: React.FC<Retro90sNavbarProps> = ({
                 cyberSound.play90sKeyClick();
                 onNavigate(item.id);
               }}
-              className="px-2.5 py-1 text-[#ccc] hover:text-black hover:bg-white border border-transparent hover:border-black active:translate-y-[1px] transition-all font-semibold"
+              className="px-2.5 py-1 text-[#ccc] hover:text-black hover:bg-white border border-transparent hover:border-black active:translate-y-[1px] transition-all font-bold"
             >
               [{item.label}]
             </button>
@@ -102,7 +102,7 @@ export const Retro90sNavbar: React.FC<Retro90sNavbarProps> = ({
             className="font-mono text-xs font-bold px-3 py-1 bg-white text-black hover:bg-[#ddd] border border-black flex items-center gap-1.5 shadow-[1.5px_1.5px_0px_#000] active:translate-y-[1px]"
           >
             <FileText className="w-3.5 h-3.5" />
-            <span>[RESUME.PDF]</span>
+            <span>[Resume (PDF)]</span>
           </button>
         </div>
       </div>

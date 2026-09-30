@@ -454,22 +454,22 @@ export const Retro3DCharacterBackground: React.FC<Retro3DCharacterBackgroundProp
           <div className="flex items-center justify-between gap-3 text-white font-bold border-b border-[#333] pb-1 mb-1">
             <span className="flex items-center gap-1.5">
               <Cpu className="w-3.5 h-3.5 text-white animate-pulse" />
-              <span>3D_CYBER_SYNAPSE</span>
+              <span>3D Character Companion</span>
             </span>
-            <span className="text-[9px] bg-white text-black px-1.5 py-0.2 font-extrabold">v1998</span>
+            <span className="text-[9px] bg-white text-black px-1.5 py-0.2 font-extrabold">Three.js</span>
           </div>
           <div className="flex flex-col gap-0.5 text-[#aaa] text-[10px]">
             <div className="flex justify-between">
-              <span>KINEMATICS:</span>
-              <span className="text-white font-semibold">6-DOF TRACKING</span>
+              <span>INTERACTION:</span>
+              <span className="text-white font-semibold">Mouse Movement</span>
             </div>
             <div className="flex justify-between">
-              <span>CORE REACTOR:</span>
-              <span className="text-white font-semibold">TENSOR_CORE 98%</span>
+              <span>GRAPHICS:</span>
+              <span className="text-white font-semibold">Procedural 3D Mesh</span>
             </div>
             <div className="flex justify-between">
-              <span>CYBER SHADING:</span>
-              <span className="text-white font-semibold">MONOCHROME NOIR</span>
+              <span>STYLE:</span>
+              <span className="text-white font-semibold">90s Black & White</span>
             </div>
           </div>
         </div>
@@ -478,7 +478,7 @@ export const Retro3DCharacterBackground: React.FC<Retro3DCharacterBackgroundProp
         <div className="bg-[#101010]/85 border border-[#333] px-3 py-1.5 text-[10px] text-[#888] flex items-center justify-between">
           <span className="flex items-center gap-1.5">
             <Radio className="w-3 h-3 text-white animate-spin-slow" />
-            <span>RENDER_PIPELINE: SGI_IRIX</span>
+            <span>Renderer: WebGL</span>
           </span>
           <span className="text-white font-bold">60.0 FPS</span>
         </div>

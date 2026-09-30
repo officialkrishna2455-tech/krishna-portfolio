@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { RetroWindow } from './RetroWindow';
-import { Cpu, Terminal, Layers, Server, Database, Cloud, Star } from 'lucide-react';
+import { Cpu, Terminal, Layers, Server, Database, Cloud } from 'lucide-react';
 import { cyberSound } from '../utils/soundEffects';
 
 export const Retro90sSkills: React.FC = () => {
@@ -35,16 +35,15 @@ export const Retro90sSkills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="relative z-10 py-12 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <section id="skills" className="relative z-10 py-10 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
       <RetroWindow
         id="skills-window"
-        title="C:\SYSTEM\CONTROL_PANEL\SKILLS_REGISTRY.CPL"
+        title="Technical Skills & Technologies"
         icon="cpu"
-        version="CONFIG v4.0"
-        statusBarText={`LOADED: ${activeCategory.category} (${activeCategory.skills.length} MODULES OK)`}
+        statusBarText={`Category: ${activeCategory.category} (${activeCategory.skills.length} Technologies)`}
       >
-        {/* 1990s Folder / Property Sheet Tabs */}
-        <div className="flex flex-wrap items-end gap-1 border-b border-[#444] mb-6 pt-1 select-none">
+        {/* Category Tabs */}
+        <div className="flex flex-wrap items-end gap-1.5 border-b border-[#444] mb-6 pt-1 select-none">
           {skillCategories.map((cat, idx) => {
             const isActive = idx === activeCategoryIndex;
             return (
@@ -67,16 +66,16 @@ export const Retro90sSkills: React.FC = () => {
           })}
         </div>
 
-        {/* Tab Content: 90s Device Manager / Driver Properties */}
+        {/* Tab Content */}
         <div className="bg-[#141414] border-2 border-[#666] p-6 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
           {/* Department Description Header */}
           <div className="bg-[#080808] border-2 border-[#333] p-3.5 mb-6 flex flex-wrap items-center justify-between gap-2 font-mono text-xs sm:text-sm">
             <div className="flex items-center gap-2">
-              <span className="text-[#aaa] font-bold">&gt;&gt; SUBSYSTEM:</span>
+              <span className="text-[#aaa] font-bold">Focus Area:</span>
               <span className="text-white font-black">{activeCategory.department}</span>
             </div>
-            <span className="bg-white text-black font-black px-2 py-0.5 text-xs border border-black">
-              ALL DRIVERS SIGNED (WHQL)
+            <span className="bg-white text-black font-black px-2.5 py-0.5 text-xs border border-black">
+              {activeCategory.skills.length} Core Tools
             </span>
           </div>
 
@@ -112,7 +111,7 @@ export const Retro90sSkills: React.FC = () => {
                       {renderBlocks(pct)}
                     </span>
                     <span className="text-white font-black bg-black px-2 py-0.5 border border-[#555]">
-                      {pct}% CAPACITY
+                      {pct}% PROFICIENCY
                     </span>
                   </div>
                 </div>

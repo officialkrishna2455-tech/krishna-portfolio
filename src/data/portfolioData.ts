@@ -60,10 +60,10 @@ export const PORTFOLIO_DATA = {
       status: "Final Year Engineer"
     },
     quickStats: [
-      { label: "Deep Learning Accuracy", value: "82%+", sub: "ResNet-50 + BiLSTM" },
-      { label: "CPU Inference Time", value: "<15s", sub: "Optimized /tmp lifecycle" },
-      { label: "Core Hybrid Stack", value: "Next.js + PyTorch", sub: "Full-Stack + AI Hybrid" },
-      { label: "System Availability", value: "Active", sub: "Full-Time SWE / AI-ML" }
+      { label: "Model Accuracy", value: "82%+", sub: "Deepfake Detection" },
+      { label: "Inference Speed", value: "<15 sec", sub: "Optimized CPU runtime" },
+      { label: "Primary Stack", value: "Next.js + PyTorch", sub: "Web & Deep Learning" },
+      { label: "Availability", value: "Immediate", sub: "Full-Time SWE / AI-ML" }
     ]
   },
 

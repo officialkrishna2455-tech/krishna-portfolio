@@ -33,28 +33,28 @@ export const Retro90sFooter: React.FC<Retro90sFooterProps> = ({ onScrollToTop })
             }}
           >
             <ArrowUp className="w-3.5 h-3.5" />
-            <span>[ RETURN_TO_ROOT (TOP) ]</span>
+            <span>[ Back to Top ]</span>
           </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[11px] text-[#aaa]">
           <div>
-            <span className="text-[#666] block uppercase">SYSTEM_ARCHITECT:</span>
-            <span className="text-white font-semibold">Krishna (AI/ML & Systems)</span>
+            <span className="text-[#888] block uppercase font-bold">DEVELOPER:</span>
+            <span className="text-white font-semibold">Krishna (AI/ML & Full-Stack Systems)</span>
           </div>
           <div>
-            <span className="text-[#666] block uppercase">RENDER_PIPELINE:</span>
-            <span className="text-white font-semibold">Three.js 3D Interactive Character</span>
+            <span className="text-[#888] block uppercase font-bold">3D GRAPHICS:</span>
+            <span className="text-white font-semibold">Three.js Interactive 3D Character</span>
           </div>
           <div>
-            <span className="text-[#666] block uppercase">AESTHETIC_PROFILE:</span>
+            <span className="text-[#888] block uppercase font-bold">VISUAL THEME:</span>
             <span className="text-white font-semibold">1990s Monochrome Computer World</span>
           </div>
         </div>
 
-        <div className="mt-4 pt-3 border-t border-[#222] flex flex-wrap items-center justify-between gap-2 text-[10px] text-[#666]">
-          <span>(C) 1998 - 2026 KRISHNA. ALL NEURAL RIGHTS RESERVED.</span>
-          <span className="text-[#888]">NOIR-OS // 3D_CGI_WORKSTATION_BUILD</span>
+        <div className="mt-4 pt-3 border-t border-[#222] flex flex-wrap items-center justify-between gap-2 text-[10px] text-[#888]">
+          <span>© 2026 Krishna. All rights reserved.</span>
+          <span className="text-[#aaa]">Built with React, TypeScript & Three.js</span>
         </div>
       </div>
     </footer>
