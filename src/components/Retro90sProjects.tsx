@@ -42,9 +42,9 @@ export const Retro90sProjects: React.FC = () => {
         </div>
 
         {/* Two-Pane Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="retro-projects-split">
           {/* Left Pane: Project Selector List */}
-          <div className="lg:col-span-4 flex flex-col gap-2.5">
+          <div className="retro-projects-split-nav flex flex-col gap-2.5">
             <div className="bg-[#1a1a1a] border-2 border-[#444] p-2.5 text-xs font-mono text-white font-extrabold uppercase flex items-center gap-2">
               <Folder className="w-4 h-4 text-white" />
               <span>Select Project</span>
@@ -86,7 +86,7 @@ export const Retro90sProjects: React.FC = () => {
           </div>
 
           {/* Right Pane: Selected Project Details */}
-          <div className="lg:col-span-8 flex flex-col gap-4">
+          <div className="retro-projects-split-body flex flex-col gap-4">
             <div className="bg-[#141414] border-2 border-[#666] p-6 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
               {/* Project Header */}
               <div className="border-b border-[#333] pb-4 mb-5 flex flex-wrap items-start justify-between gap-4">

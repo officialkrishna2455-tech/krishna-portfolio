@@ -51,12 +51,6 @@ export function App() {
       {/* 2. 1990s CRT MONITOR SCANLINE OVERLAY (TOGGLEABLE) */}
       <RetroCRTOverlay enabled={crtEnabled} />
 
-      {/* 3. 1990s DESKTOP SHORTCUT ICONS */}
-      <RetroDesktopIcons
-        onNavigate={handleNavigate}
-        onOpenResume={() => setShowResumeModal(true)}
-      />
-
       {/* 4. 1990s TOP SYSTEM NAVIGATION */}
       <Retro90sNavbar
         onNavigate={handleNavigate}

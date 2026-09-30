@@ -28,9 +28,9 @@ export const Retro90sHero: React.FC<Retro90sHeroProps> = ({
         statusBarText="STATUS: AVAILABLE FOR FULL-TIME ROLES | LOCATION: BHOPAL, INDIA"
       >
         {/* Main Hero Split Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="retro-hero-split items-center">
           {/* Left Column: Real Profile, Clear Bio & Action Buttons */}
-          <div className="lg:col-span-7 flex flex-col gap-5">
+          <div className="retro-hero-split-bio flex flex-col gap-5">
             {/* Status & Location Badge */}
             <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
               <span className="flex items-center gap-1.5 bg-black text-white px-2.5 py-1 font-bold border-2 border-white">
@@ -121,7 +121,7 @@ export const Retro90sHero: React.FC<Retro90sHeroProps> = ({
           </div>
 
           {/* Right Column: 90s 3D Character Companion Visualizer */}
-          <div className="lg:col-span-5 flex flex-col items-center">
+          <div className="retro-hero-split-companion flex flex-col items-center">
             <div 
               className="relative w-full max-w-[360px] bg-[#121212] border-2 border-[#666] p-3.5 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000,6px_6px_24px_rgba(0,0,0,0.9)]"
             >

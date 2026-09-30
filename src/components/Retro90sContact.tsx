@@ -51,9 +51,9 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
         version="Available Now"
         statusBarText="Status: Available for Full-Time Roles | Email: officialkrishna2455@gmail.com"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="retro-contact-split">
           {/* Left Column: Direct Coordinates */}
-          <div className="lg:col-span-5 flex flex-col gap-4">
+          <div className="retro-contact-split-info flex flex-col gap-4">
             <div className="bg-[#141414] border-2 border-[#666] p-6 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
               <div className="flex items-center gap-2 font-mono text-sm font-black text-white border-b border-[#333] pb-2.5 mb-4">
                 <Radio className="w-5 h-5 text-white" />
@@ -143,7 +143,7 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
           </div>
 
           {/* Right Column: 90s Electronic Mail Composer Form */}
-          <div className="lg:col-span-7 flex flex-col gap-4">
+          <div className="retro-contact-split-form flex flex-col gap-4">
             <div className="bg-[#111111] border-2 border-[#555] p-5 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
               <div className="flex items-center justify-between border-b border-[#333] pb-2 mb-4 font-mono text-xs text-[#aaa]">
                 <span className="font-bold text-white flex items-center gap-2">

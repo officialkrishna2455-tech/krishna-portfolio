@@ -15,9 +15,9 @@ export const Retro90sCertifications: React.FC = () => {
         icon="disc"
         statusBarText="Education: B.Tech CSE (AI/ML) | Verified Certifications: Active"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="retro-certs-split">
           {/* Left Column: Academic Degree Record */}
-          <div className="lg:col-span-5 flex flex-col gap-4">
+          <div className="retro-certs-split-degree flex flex-col gap-4">
             <div 
               className="bg-[#141414] border-2 border-[#666] p-6 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]"
             >
@@ -68,7 +68,7 @@ export const Retro90sCertifications: React.FC = () => {
           </div>
 
           {/* Right Column: Verified Certifications */}
-          <div className="lg:col-span-7 flex flex-col gap-4">
+          <div className="retro-certs-split-list flex flex-col gap-4">
             <div className="bg-[#181818] border-2 border-[#444] p-3 text-xs sm:text-sm font-mono text-white flex items-center justify-between">
               <span className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-white" />
