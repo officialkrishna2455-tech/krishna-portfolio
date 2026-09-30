@@ -73,10 +73,10 @@ export const Retro90sProjects: React.FC = () => {
                       <FileCode className={`w-4 h-4 ${isSelected ? 'text-black' : 'text-[#888]'}`} />
                     </div>
                     <div className="overflow-hidden">
-                      <div className="font-bold truncate">
+                      <div className="font-extrabold text-sm truncate">
                         {proj.title}
                       </div>
-                      <div className={`text-[10px] truncate ${isSelected ? 'text-[#333]' : 'text-[#777]'}`}>
+                      <div className={`text-xs truncate font-semibold ${isSelected ? 'text-[#111]' : 'text-[#d4d4d4]'}`}>
                         {proj.genre}
                       </div>
                     </div>
@@ -86,37 +86,39 @@ export const Retro90sProjects: React.FC = () => {
             </div>
 
             {/* Quick System Telemetry Box on Left */}
-            <div className="mt-4 bg-[#0a0a0a] border border-[#262626] p-3 font-mono text-[10px] text-[#777] hidden lg:block">
-              <div className="text-white font-bold mb-1 border-b border-[#222] pb-1 flex items-center justify-between">
+            <div className="mt-4 bg-[#141414] border-2 border-[#444] p-3.5 font-mono text-xs text-[#dcdcdc] hidden lg:block">
+              <div className="text-white font-extrabold mb-1.5 border-b border-[#333] pb-1.5 flex items-center justify-between">
                 <span>INSPECTOR STATUS</span>
-                <span className="w-2 h-2 rounded-full bg-white animate-ping" />
+                <span className="w-2.5 h-2.5 rounded-full bg-white animate-ping" />
               </div>
-              <div>SELECTED ARCHITECTURE: {activeProject.interactiveType.toUpperCase()}</div>
-              <div>CLASSIFICATION SCORE: {activeProject.score}</div>
-              <div>STATUS: PRODUCTION VERIFIED</div>
+              <div className="space-y-1">
+                <div>SELECTED ARCHITECTURE: <span className="text-white font-bold">{activeProject.interactiveType.toUpperCase()}</span></div>
+                <div>CLASSIFICATION SCORE: <span className="text-white font-bold">{activeProject.score}</span></div>
+                <div>STATUS: <span className="text-white font-bold">PRODUCTION VERIFIED</span></div>
+              </div>
             </div>
           </div>
 
           {/* Right Pane: Selected Project Deep Inspection File */}
           <div className="lg:col-span-8 flex flex-col gap-4">
             <div 
-              className="bg-[#111111] border-2 border-[#555] p-5 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]"
+              className="bg-[#141414] border-2 border-[#666] p-6 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]"
             >
               {/* Project File Header */}
-              <div className="border-b border-[#2b2b2b] pb-4 mb-4 flex flex-wrap items-start justify-between gap-3">
+              <div className="border-b border-[#333] pb-4 mb-5 flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <div className="flex items-center gap-2 font-mono text-[11px] text-[#888] mb-1">
-                    <span className="bg-black text-white px-2 py-0.5 border border-[#333] font-bold">
+                  <div className="flex items-center gap-2 font-mono text-xs text-white mb-2">
+                    <span className="bg-black text-white px-2.5 py-0.5 border border-white/60 font-bold">
                       YEAR: {activeProject.year}
                     </span>
-                    <span className="bg-[#1c1c1c] text-[#ccc] px-2 py-0.5 border border-[#333]">
+                    <span className="bg-[#242424] text-white px-2.5 py-0.5 border border-[#555] font-semibold">
                       RUNTIME: {activeProject.runtime}
                     </span>
                   </div>
-                  <h3 className="font-mono text-2xl sm:text-3xl font-extrabold text-white tracking-tight uppercase">
+                  <h3 className="font-mono text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">
                     {activeProject.title}
                   </h3>
-                  <p className="font-mono text-xs text-[#aaa] mt-1 font-semibold">
+                  <p className="font-mono text-sm sm:text-base text-white font-bold mt-1.5">
                     {activeProject.subtitle}
                   </p>
                 </div>
@@ -127,30 +129,30 @@ export const Retro90sProjects: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => cyberSound.play90sKeyClick()}
-                  className="font-mono text-xs font-bold px-3.5 py-2 bg-black text-white hover:bg-white hover:text-black border-2 border-white flex items-center gap-2 active:translate-y-[1px] transition-all shadow-[2px_2px_0px_#444]"
+                  className="font-mono text-xs sm:text-sm font-black px-4 py-2.5 bg-black text-white hover:bg-white hover:text-black border-2 border-white flex items-center gap-2 active:translate-y-[1px] transition-all shadow-[2px_2px_0px_#444]"
                 >
-                  <GithubIcon className="w-4 h-4" />
+                  <GithubIcon className="w-4 h-4 stroke-[2.5]" />
                   <span>[ VIEW_SOURCE_CODE ]</span>
-                  <ExternalLink className="w-3 h-3 ml-0.5" />
+                  <ExternalLink className="w-3.5 h-3.5 ml-0.5" />
                 </a>
               </div>
 
               {/* Project Summary */}
-              <div className="font-mono text-xs text-[#ddd] leading-relaxed mb-5 bg-[#0a0a0a] border border-[#222] p-3.5">
-                <span className="text-white font-bold">&gt;&gt; ABSTRACT: </span>
+              <div className="font-mono text-sm sm:text-base text-white leading-relaxed mb-6 bg-[#0a0a0a] border-2 border-[#333] p-4">
+                <span className="text-white font-extrabold">&gt;&gt; ABSTRACT: </span>
                 {activeProject.summary}
               </div>
 
               {/* Bullet Points Architecture Highlights */}
-              <div className="mb-5">
-                <div className="font-mono text-xs font-bold text-white uppercase mb-2.5 flex items-center gap-2">
-                  <Terminal className="w-3.5 h-3.5 text-white" />
+              <div className="mb-6">
+                <div className="font-mono text-xs sm:text-sm font-extrabold text-white uppercase mb-3 flex items-center gap-2 border-b border-[#333] pb-1.5">
+                  <Terminal className="w-4 h-4 text-white" />
                   <span>TECHNICAL ARCHITECTURE & HIGHLIGHTS</span>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {activeProject.bulletPoints.map((point, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5 font-mono text-xs text-[#bbb] leading-relaxed">
-                      <span className="text-white mt-0.5 font-bold shrink-0">[+]</span>
+                    <div key={idx} className="flex items-start gap-3 font-mono text-sm text-[#f0f0f0] leading-relaxed">
+                      <span className="text-white mt-0.5 font-black text-base shrink-0">[+]</span>
                       <span>{point}</span>
                     </div>
                   ))}
@@ -158,25 +160,25 @@ export const Retro90sProjects: React.FC = () => {
               </div>
 
               {/* Metrics Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-5 font-mono">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6 font-mono">
                 {activeProject.metrics.map((metric, i) => (
-                  <div key={i} className="bg-[#181818] border border-[#333] p-2.5 flex flex-col justify-between">
-                    <span className="text-[10px] text-[#777] uppercase">{metric.label}</span>
-                    <span className="text-sm font-bold text-white mt-1">{metric.value}</span>
+                  <div key={i} className="bg-[#1c1c1c] border-2 border-[#444] p-3 flex flex-col justify-between">
+                    <span className="text-xs text-[#d1d5db] font-bold uppercase">{metric.label}</span>
+                    <span className="text-base sm:text-lg font-black text-white mt-1">{metric.value}</span>
                   </div>
                 ))}
               </div>
 
               {/* Tech Stack Chips in 90s Pixel Border Style */}
               <div>
-                <div className="font-mono text-[11px] font-bold text-[#888] uppercase mb-2">
+                <div className="font-mono text-xs font-extrabold text-white uppercase mb-2.5">
                   TECHNOLOGY STACK & DEPENDENCIES
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2.5">
                   {activeProject.techStack.map((tech, i) => (
                     <span
                       key={i}
-                      className="font-mono text-[11px] bg-black text-[#eaeaea] px-2.5 py-1 border border-[#444] shadow-[1px_1px_0px_#222]"
+                      className="font-mono text-xs font-bold bg-black text-white px-3 py-1.5 border-2 border-white/60 shadow-[1px_1px_0px_#333]"
                     >
                       {tech}
                     </span>

@@ -54,62 +54,62 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Direct Coordinates */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="bg-[#121212] border-2 border-[#555] p-5 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
-              <div className="flex items-center gap-2 font-mono text-xs font-bold text-white border-b border-[#333] pb-2 mb-3">
-                <Radio className="w-4 h-4 text-white" />
+            <div className="bg-[#141414] border-2 border-[#666] p-6 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
+              <div className="flex items-center gap-2 font-mono text-sm font-black text-white border-b border-[#333] pb-2.5 mb-4">
+                <Radio className="w-5 h-5 text-white" />
                 <span>OPERATOR_COORDINATES</span>
               </div>
 
-              <p className="font-mono text-xs text-[#aaa] leading-relaxed mb-4">
+              <p className="font-mono text-xs sm:text-sm text-[#f0f0f0] font-medium leading-relaxed mb-5">
                 Available for full-time Software Engineer, AI/ML Engineer, and Intelligent Systems roles. Connect via direct carrier or electronic mail.
               </p>
 
-              <div className="space-y-3 font-mono text-xs">
+              <div className="space-y-3.5 font-mono">
                 {/* Email Address */}
-                <div className="bg-[#0b0b0b] border border-[#2b2b2b] p-2.5 flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2 overflow-hidden">
-                    <Mail className="w-3.5 h-3.5 text-white shrink-0" />
-                    <span className="text-white truncate font-bold">{director.email}</span>
+                <div className="bg-[#0b0b0b] border-2 border-[#444] p-3 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2.5 overflow-hidden">
+                    <Mail className="w-4 h-4 text-white shrink-0" />
+                    <span className="text-white text-xs sm:text-sm truncate font-black">{director.email}</span>
                   </div>
                   <button
                     onClick={handleCopyEmail}
-                    className="shrink-0 bg-[#252525] text-white hover:bg-white hover:text-black border border-[#555] px-2 py-1 text-[10px] font-bold active:translate-y-[1px]"
+                    className="shrink-0 bg-[#333] text-white hover:bg-white hover:text-black border border-white px-2.5 py-1 text-xs font-black active:translate-y-[1px]"
                   >
-                    {copiedEmail ? <Check className="w-3 h-3 text-green-400" /> : <Copy className="w-3 h-3" />}
+                    {copiedEmail ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
                   </button>
                 </div>
 
                 {/* Telephone Line */}
-                <div className="bg-[#0b0b0b] border border-[#2b2b2b] p-2.5 flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2 overflow-hidden">
-                    <Phone className="w-3.5 h-3.5 text-white shrink-0" />
-                    <span className="text-white truncate font-bold">{director.phone}</span>
+                <div className="bg-[#0b0b0b] border-2 border-[#444] p-3 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2.5 overflow-hidden">
+                    <Phone className="w-4 h-4 text-white shrink-0" />
+                    <span className="text-white text-xs sm:text-sm truncate font-black">{director.phone}</span>
                   </div>
                   <button
                     onClick={handleCopyPhone}
-                    className="shrink-0 bg-[#252525] text-white hover:bg-white hover:text-black border border-[#555] px-2 py-1 text-[10px] font-bold active:translate-y-[1px]"
+                    className="shrink-0 bg-[#333] text-white hover:bg-white hover:text-black border border-white px-2.5 py-1 text-xs font-black active:translate-y-[1px]"
                   >
-                    {copiedPhone ? <Check className="w-3 h-3 text-green-400" /> : <Copy className="w-3 h-3" />}
+                    {copiedPhone ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
                   </button>
                 </div>
 
                 {/* Location */}
-                <div className="bg-[#0b0b0b] border border-[#2b2b2b] p-2.5 flex items-center gap-2 text-[#ccc]">
-                  <MapPin className="w-3.5 h-3.5 text-white shrink-0" />
+                <div className="bg-[#0b0b0b] border-2 border-[#444] p-3 flex items-center gap-2.5 text-white text-xs sm:text-sm font-bold">
+                  <MapPin className="w-4 h-4 text-white shrink-0" />
                   <span className="truncate">{director.location}</span>
                 </div>
               </div>
 
               {/* Social Channels in 90s Bevel Button Style */}
-              <div className="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-[#262626]">
+              <div className="grid grid-cols-2 gap-3 mt-5 pt-4 border-t border-[#333]">
                 <a
                   href={director.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => cyberSound.play90sKeyClick()}
-                  className="font-mono text-xs font-bold p-2 bg-[#1f1f1f] text-white hover:bg-white hover:text-black border border-[#555] flex items-center justify-center gap-2 text-center"
+                  className="font-mono text-xs sm:text-sm font-black p-2.5 bg-[#222] text-white hover:bg-white hover:text-black border-2 border-white flex items-center justify-center gap-2 text-center"
                 >
-                  <GithubIcon className="w-3.5 h-3.5" />
+                  <GithubIcon className="w-4 h-4" />
                   <span>GITHUB</span>
                 </a>
 
@@ -118,9 +118,9 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => cyberSound.play90sKeyClick()}
-                  className="font-mono text-xs font-bold p-2 bg-[#1f1f1f] text-white hover:bg-white hover:text-black border border-[#555] flex items-center justify-center gap-2 text-center"
+                  className="font-mono text-xs sm:text-sm font-black p-2.5 bg-[#222] text-white hover:bg-white hover:text-black border-2 border-white flex items-center justify-center gap-2 text-center"
                 >
-                  <LinkedinIcon className="w-3.5 h-3.5" />
+                  <LinkedinIcon className="w-4 h-4" />
                   <span>LINKEDIN</span>
                 </a>
               </div>
@@ -131,9 +131,9 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                   cyberSound.play90sKeyClick();
                   onOpenResume();
                 }}
-                className="w-full mt-3 font-mono text-xs font-bold py-2 bg-white text-black hover:bg-[#ddd] border border-black flex items-center justify-center gap-2"
+                className="w-full mt-4 font-mono text-sm font-black py-3 bg-white text-black hover:bg-[#ddd] border-2 border-black flex items-center justify-center gap-2"
                 style={{
-                  boxShadow: 'inset 1px 1px 0px #fff, inset -1px -1px 0px #888, 2px 2px 0px #000'
+                  boxShadow: 'inset 1.5px 1.5px 0px #fff, inset -1.5px -1.5px 0px #888, 3px 3px 0px #000'
                 }}
               >
                 <FileText className="w-4 h-4 text-black" />
@@ -174,10 +174,10 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSendPacket} className="space-y-3.5 font-mono text-xs">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <form onSubmit={handleSendPacket} className="space-y-4 font-mono">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-[10px] text-[#888] uppercase block mb-1">
+                      <label className="text-xs font-black text-white uppercase block mb-1.5">
                         SENDER_IDENTIFIER (NAME):
                       </label>
                       <input
@@ -186,12 +186,12 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                         placeholder="e.g. Lead Technical Recruiter"
                         value={formData.sender}
                         onChange={(e) => setFormData({ ...formData, sender: e.target.value })}
-                        className="w-full bg-[#080808] border border-[#444] text-white px-3 py-2 text-xs focus:border-white focus:outline-none"
+                        className="w-full bg-black border-2 border-white/60 text-white px-3.5 py-2.5 text-sm focus:border-white focus:outline-none placeholder:text-[#777]"
                       />
                     </div>
 
                     <div>
-                      <label className="text-[10px] text-[#888] uppercase block mb-1">
+                      <label className="text-xs font-black text-white uppercase block mb-1.5">
                         RETURN_ROUTING (EMAIL):
                       </label>
                       <input
@@ -200,13 +200,13 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                         placeholder="recruiter@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-[#080808] border border-[#444] text-white px-3 py-2 text-xs focus:border-white focus:outline-none"
+                        className="w-full bg-black border-2 border-white/60 text-white px-3.5 py-2.5 text-sm focus:border-white focus:outline-none placeholder:text-[#777]"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-[10px] text-[#888] uppercase block mb-1">
+                    <label className="text-xs font-black text-white uppercase block mb-1.5">
                       PACKET_HEADER (SUBJECT):
                     </label>
                     <input
@@ -214,12 +214,12 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full bg-[#080808] border border-[#444] text-white px-3 py-2 text-xs focus:border-white focus:outline-none"
+                      className="w-full bg-black border-2 border-white/60 text-white px-3.5 py-2.5 text-sm focus:border-white focus:outline-none"
                     />
                   </div>
 
                   <div>
-                    <label className="text-[10px] text-[#888] uppercase block mb-1">
+                    <label className="text-xs font-black text-white uppercase block mb-1.5">
                       MESSAGE_PAYLOAD:
                     </label>
                     <textarea
@@ -228,20 +228,20 @@ export const Retro90sContact: React.FC<Retro90sContactProps> = ({ onOpenResume }
                       placeholder="Write your transmission or project inquiries here..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full bg-[#080808] border border-[#444] text-white px-3 py-2 text-xs focus:border-white focus:outline-none resize-none"
+                      className="w-full bg-black border-2 border-white/60 text-white px-3.5 py-2.5 text-sm focus:border-white focus:outline-none resize-none placeholder:text-[#777]"
                     />
                   </div>
 
-                  <div className="pt-2 flex items-center justify-between">
-                    <span className="text-[10px] text-[#666]">
-                      PRESS SEND TO DISPATCH PACKET
+                  <div className="pt-2 flex flex-wrap items-center justify-between gap-3">
+                    <span className="text-xs text-[#d1d5db] font-bold">
+                      PRESS SEND TO DISPATCH PACKET OVER PORT 25
                     </span>
 
                     <button
                       type="submit"
-                      className="font-mono text-xs font-bold px-5 py-2.5 bg-white text-black hover:bg-[#ccc] border-2 border-white flex items-center gap-2 shadow-[2px_2px_0px_#444] active:translate-y-[1px]"
+                      className="font-mono text-sm font-black px-6 py-3 bg-white text-black hover:bg-[#ddd] border-2 border-white flex items-center gap-2.5 shadow-[3px_3px_0px_#444] active:translate-y-[1px]"
                     >
-                      <Send className="w-3.5 h-3.5" />
+                      <Send className="w-4 h-4 stroke-[2.5]" />
                       <span>[ TRANSMIT_PACKET.SEND ]</span>
                     </button>
                   </div>

@@ -72,31 +72,31 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
         }}
       >
         {/* Title & Icon */}
-        <div className="flex items-center gap-2 overflow-hidden">
-          <div className="p-0.5 bg-black border border-[#777] rounded-[1px] flex items-center justify-center">
+        <div className="flex items-center gap-2.5 overflow-hidden">
+          <div className="p-1 bg-black border border-white/60 rounded-[1px] flex items-center justify-center">
             {getIcon()}
           </div>
-          <span className="font-mono text-xs font-bold tracking-wider text-white truncate drop-shadow-[0_1px_1px_rgba(0,0,0,1)]">
+          <span className="font-mono text-sm font-extrabold tracking-wider text-white truncate drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
             {title}
           </span>
-          <span className="hidden sm:inline-block text-[10px] font-mono text-[#888] bg-[#0a0a0a] px-1.5 py-0.5 border border-[#333]">
+          <span className="hidden sm:inline-block text-xs font-mono font-bold text-white bg-[#000] px-2 py-0.5 border border-[#555]">
             {version}
           </span>
         </div>
 
         {/* 90s Window Control Buttons: [ - ] [ □ ] [ X ] */}
-        <div className="flex items-center gap-1 shrink-0 ml-2">
+        <div className="flex items-center gap-1.5 shrink-0 ml-2">
           {/* Minimize */}
           <button
             onClick={handleMinimize}
             title="Minimize"
             aria-label="Minimize Window"
-            className="w-5 h-5 flex items-center justify-center bg-[#2a2a2a] text-white hover:bg-white hover:text-black border border-[#666] active:translate-y-[1px] transition-colors"
+            className="w-6 h-6 flex items-center justify-center bg-[#333] text-white hover:bg-white hover:text-black border border-[#777] active:translate-y-[1px] transition-colors font-bold"
             style={{
               boxShadow: 'inset 1px 1px 0px #fff, inset -1px -1px 0px #000'
             }}
           >
-            <Minus className="w-3 h-3" />
+            <Minus className="w-3.5 h-3.5" />
           </button>
 
           {/* Maximize */}
@@ -104,12 +104,12 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
             onClick={handleMaximize}
             title={isMaximized ? "Restore" : "Maximize"}
             aria-label="Maximize Window"
-            className="w-5 h-5 flex items-center justify-center bg-[#2a2a2a] text-white hover:bg-white hover:text-black border border-[#666] active:translate-y-[1px] transition-colors"
+            className="w-6 h-6 flex items-center justify-center bg-[#333] text-white hover:bg-white hover:text-black border border-[#777] active:translate-y-[1px] transition-colors font-bold"
             style={{
               boxShadow: 'inset 1px 1px 0px #fff, inset -1px -1px 0px #000'
             }}
           >
-            <Square className="w-2.5 h-2.5" />
+            <Square className="w-3 h-3" />
           </button>
 
           {/* Close / Action */}
@@ -117,45 +117,45 @@ export const RetroWindow: React.FC<RetroWindowProps> = ({
             onClick={handleMinimize}
             title="Toggle View"
             aria-label="Toggle Window"
-            className="w-5 h-5 flex items-center justify-center bg-[#2a2a2a] text-white hover:bg-white hover:text-black border border-[#666] active:translate-y-[1px] transition-colors"
+            className="w-6 h-6 flex items-center justify-center bg-[#333] text-white hover:bg-white hover:text-black border border-[#777] active:translate-y-[1px] transition-colors font-bold"
             style={{
               boxShadow: 'inset 1px 1px 0px #fff, inset -1px -1px 0px #000'
             }}
           >
-            <X className="w-3 h-3 font-bold" />
+            <X className="w-3.5 h-3.5 font-bold" />
           </button>
         </div>
       </div>
 
       {/* 2. Classic 90s Menu Bar (File, Edit, View, Help) */}
-      <div className="bg-[#181818] border-b border-[#2d2d2d] px-3 py-1 text-[11px] font-mono text-[#aaa] flex items-center gap-4 select-none">
-        <span className="hover:text-white cursor-pointer hover:underline" onClick={() => cyberSound.play90sKeyClick()}>File</span>
-        <span className="hover:text-white cursor-pointer hover:underline" onClick={() => cyberSound.play90sKeyClick()}>Edit</span>
-        <span className="hover:text-white cursor-pointer hover:underline" onClick={() => cyberSound.play90sKeyClick()}>View</span>
-        <span className="hover:text-white cursor-pointer hover:underline" onClick={() => cyberSound.play90sKeyClick()}>Network</span>
-        <span className="hover:text-white cursor-pointer hover:underline" onClick={() => cyberSound.play90sKeyClick()}>Help</span>
-        <div className="ml-auto text-[10px] text-[#666] hidden md:block">
+      <div className="bg-[#1a1a1a] border-b border-[#333] px-3.5 py-1.5 text-xs font-mono text-[#e5e5e5] font-semibold flex items-center gap-5 select-none">
+        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>File</span>
+        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>Edit</span>
+        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>View</span>
+        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>Network</span>
+        <span className="hover:text-white hover:underline cursor-pointer" onClick={() => cyberSound.play90sKeyClick()}>Help</span>
+        <div className="ml-auto text-xs text-[#bbb] font-bold hidden md:block">
           C:\KRISHNA\PORTFOLIO\
         </div>
       </div>
 
       {/* 3. Window Body */}
       {!isMinimized && (
-        <div className="p-4 sm:p-6 text-[#dedede] bg-[#0d0d0d]/95 backdrop-blur-md">
+        <div className="p-4 sm:p-7 text-[#ffffff] bg-[#0c0c0c] border border-black">
           {children}
         </div>
       )}
 
       {/* 4. 1990s Status Bar */}
       <div 
-        className="bg-[#151515] border-t border-[#262626] px-3 py-1 flex items-center justify-between text-[10px] font-mono text-[#888] select-none"
+        className="bg-[#181818] border-t border-[#333] px-3.5 py-1.5 flex items-center justify-between text-xs font-mono text-[#dcdcdc] select-none"
         style={{
           boxShadow: 'inset 1px 1px 0px #000'
         }}
       >
-        <span className="truncate">{statusBarText}</span>
-        <span className="hidden sm:inline-block shrink-0 text-white font-bold bg-[#222] px-2 py-0.5 border border-[#444]">
-          56.6K BAUD
+        <span className="truncate font-semibold">{statusBarText}</span>
+        <span className="hidden sm:inline-block shrink-0 text-black font-extrabold bg-white px-2 py-0.5 border border-[#333]">
+          56.6K BAUD OK
         </span>
       </div>
     </div>

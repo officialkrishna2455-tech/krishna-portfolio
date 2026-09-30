@@ -11,10 +11,10 @@ export const RetroCRTOverlay: React.FC<RetroCRTOverlayProps> = ({ enabled }) => 
     <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden select-none">
       {/* 1. Fine CRT Horizontal Scanline Grid */}
       <div
-        className="absolute inset-0 w-full h-full opacity-35"
+        className="absolute inset-0 w-full h-full opacity-10"
         style={{
-          backgroundImage: 'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.75) 50%)',
-          backgroundSize: '100% 3px'
+          backgroundImage: 'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.5) 50%)',
+          backgroundSize: '100% 4px'
         }}
       />
 

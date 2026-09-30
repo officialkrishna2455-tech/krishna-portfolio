@@ -51,31 +51,31 @@ export const Retro90sSkills: React.FC = () => {
               <button
                 key={idx}
                 onClick={() => handleTabChange(idx)}
-                className={`font-mono text-xs px-3.5 py-1.5 border-t-2 border-x-2 transition-all flex items-center gap-1.5 ${
+                className={`font-mono text-xs sm:text-sm px-4 py-2 border-t-2 border-x-2 transition-all flex items-center gap-2 ${
                   isActive
-                    ? 'bg-[#1a1a1a] text-white font-bold border-[#666] -mb-[1px] border-b-0 shadow-[inset_1px_1px_0px_#fff]'
-                    : 'bg-[#0f0f0f] text-[#888] border-[#2a2a2a] hover:text-[#ccc] hover:bg-[#151515]'
+                    ? 'bg-[#222] text-white font-black border-white -mb-[1px] border-b-0 shadow-[inset_1.5px_1.5px_0px_#fff]'
+                    : 'bg-[#0f0f0f] text-[#d4d4d4] border-[#333] hover:text-white hover:bg-[#1c1c1c] font-bold'
                 }`}
                 style={{
-                  boxShadow: isActive ? 'inset 1px 1px 0px #fff, inset -1px 0px 0px #000' : 'none'
+                  boxShadow: isActive ? 'inset 1.5px 1.5px 0px #fff, inset -1.5px 0px 0px #000' : 'none'
                 }}
               >
                 <span>{cat.category}</span>
-                {isActive && <span className="w-1.5 h-1.5 bg-white" />}
+                {isActive && <span className="w-2 h-2 bg-white" />}
               </button>
             );
           })}
         </div>
 
         {/* Tab Content: 90s Device Manager / Driver Properties */}
-        <div className="bg-[#111111] border-2 border-[#444] p-5 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
+        <div className="bg-[#141414] border-2 border-[#666] p-6 shadow-[inset_1.5px_1.5px_0px_#fff,inset_-1.5px_-1.5px_0px_#000]">
           {/* Department Description Header */}
-          <div className="bg-[#080808] border border-[#2b2b2b] p-3 mb-6 flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+          <div className="bg-[#080808] border-2 border-[#333] p-3.5 mb-6 flex flex-wrap items-center justify-between gap-2 font-mono text-xs sm:text-sm">
             <div className="flex items-center gap-2">
-              <span className="text-[#666]">&gt;&gt; SUBSYSTEM:</span>
-              <span className="text-white font-bold">{activeCategory.department}</span>
+              <span className="text-[#aaa] font-bold">&gt;&gt; SUBSYSTEM:</span>
+              <span className="text-white font-black">{activeCategory.department}</span>
             </div>
-            <span className="bg-white text-black font-extrabold px-1.5 py-0.2 text-[10px]">
+            <span className="bg-white text-black font-black px-2 py-0.5 text-xs border border-black">
               ALL DRIVERS SIGNED (WHQL)
             </span>
           </div>
@@ -87,31 +87,31 @@ export const Retro90sSkills: React.FC = () => {
               return (
                 <div
                   key={sIdx}
-                  className="bg-[#151515] border border-[#333] p-3.5 flex flex-col justify-between shadow-[inset_1px_1px_0px_#222,inset_-1px_-1px_0px_#000] hover:border-white transition-colors"
+                  className="bg-[#1a1a1a] border-2 border-[#444] p-4 flex flex-col justify-between shadow-[inset_1px_1px_0px_#333,inset_-1px_-1px_0px_#000] hover:border-white transition-colors"
                 >
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-white" />
-                      <span className="font-mono text-sm font-bold text-white tracking-wide">
+                      <span className="w-2.5 h-2.5 bg-white" />
+                      <span className="font-mono text-base font-extrabold text-white tracking-wide">
                         {skill.name}
                       </span>
                     </div>
 
-                    <span className="font-mono text-[10px] font-bold bg-black text-white px-2 py-0.5 border border-[#555]">
+                    <span className="font-mono text-xs font-black bg-white text-black px-2 py-0.5 border border-black shadow-[1px_1px_0px_#000]">
                       {skill.level.toUpperCase()}
                     </span>
                   </div>
 
-                  <p className="font-mono text-[11px] text-[#999] leading-relaxed mb-3">
+                  <p className="font-mono text-xs sm:text-sm text-[#f0f0f0] font-medium leading-relaxed mb-4">
                     {skill.description}
                   </p>
 
                   {/* 1990s Segmented Block Meter */}
-                  <div className="pt-2 border-t border-[#262626] flex items-center justify-between font-mono text-[11px]">
-                    <span className="text-white font-bold tracking-widest text-[10px]">
+                  <div className="pt-2.5 border-t border-[#333] flex items-center justify-between font-mono text-xs sm:text-sm">
+                    <span className="text-white font-black tracking-widest">
                       {renderBlocks(pct)}
                     </span>
-                    <span className="text-white font-extrabold text-[10px]">
+                    <span className="text-white font-black bg-black px-2 py-0.5 border border-[#555]">
                       {pct}% CAPACITY
                     </span>
                   </div>
